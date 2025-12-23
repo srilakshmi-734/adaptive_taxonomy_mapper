@@ -125,68 +125,44 @@ This design choice ensures speed, explainability, and low operational cost.
 
 ---
 
-## Example Output
+how_to_run:
+  requirements:
+    - Python 3.8 or higher
 
-### `results.json`
-```json
-{
-  "case_id": 5,
-  "mapped_genre": "Legal Thriller",
-  "reasoning": "Semantic concept 'battle of minds' suggests Legal Thriller."
-}
+  command: >
+    python main.py
 
+  output_files_generated:
+    - output/results.json
+    - reasoning_log.txt
 
-How to Run the Project
-Requirements
+scalability_considerations:
+  - Linear-time text processing
+  - Generator-based loading for large datasets
+  - Modular design allows easy extension to:
+      - Embedding-based similarity
+      - Hybrid rule + ML inference
+      - LLM-assisted fallback systems
 
-Python 3.8 or higher
+design_philosophy:
+  priorities:
+    - Explainability over black-box accuracy
+    - Deterministic behavior over probabilistic guessing
+    - Maintainability and scalability over unnecessary complexity
+  note: >
+    The architecture mirrors real-world content classification
+    and recommendation pipelines.
 
-Command
-python main.py
+future_enhancements:
+  - Confidence scoring for predictions
+  - TF-IDF or embedding-based similarity
+  - Multilingual support
+  - Hybrid LLM-assisted inference
 
-Output Files Generated
+conclusion: >
+  The Adaptive Taxonomy Mapper demonstrates a scalable,
+  honest, and explainable approach to transforming noisy
+  user-generated inputs into high-quality taxonomy labels.
+  It balances accuracy, transparency, and system design
+  principles suitable for real-world deployment.
 
-output/results.json
-
-reasoning_log.txt
-
-Scalability Considerations
-
-Linear-time text processing
-
-Generator-based loading for large datasets
-
-Modular design allows easy extension to:
-
-Embedding-based similarity
-
-Hybrid rule + ML inference
-
-LLM-assisted fallback systems
-
-Design Philosophy
-
-The system prioritizes:
-
-Explainability over black-box accuracy
-
-Deterministic behavior over probabilistic guessing
-
-Maintainability and scalability over unnecessary complexity
-
-The architecture mirrors real-world content classification and recommendation pipelines.
-
-Future Enhancements
-
-Confidence scoring for predictions
-
-TF-IDF or embedding-based similarity
-
-Multilingual support
-
-Hybrid LLM-assisted inference
-
-Conclusion
-
-The Adaptive Taxonomy Mapper demonstrates a scalable, honest, and explainable approach to transforming noisy user-generated inputs into high-quality taxonomy labels.
-It balances accuracy, transparency, and system design principles suitable for real-world deployment.
