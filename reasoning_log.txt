@@ -1,0 +1,15 @@
+Case 1: Enemies-to-Lovers -> Strong keyword 'hate' indicates Enemies-to-Lovers.
+Case 2: Espionage -> Strong keyword 'agent' indicates Espionage.
+Case 3: Gothic -> Strong keyword 'victorian' indicates Gothic.
+Case 4: Espionage -> Strong keyword 'intelligence' indicates Espionage.
+Case 5: Legal Thriller -> Strong keyword 'lawyer' indicates Legal Thriller.
+Case 6: [UNMAPPED] -> Detected instructional or non-fiction content.
+Case 7: Second Chance -> Strong keyword 'met again' indicates Second Chance.
+Case 8: Hard Sci-Fi -> Strong keyword 'physics' indicates Hard Sci-Fi.
+Case 9: Slasher -> Strong keyword 'killer' indicates Slasher.
+Case 10: [UNMAPPED] -> Detected instructional or non-fiction content.
+Case 11: [UNMAPPED] -> No sufficient keyword or semantic evidence found.
+Case 12: [UNMAPPED] -> No sufficient keyword or semantic evidence found.
+Case 13: Psychological -> Strong keyword 'paranoia' indicates Psychological.
+Case 14: [UNMAPPED] -> No sufficient keyword or semantic evidence found.
+Case 15: [UNMAPPED] -> No sufficient keyword or semantic evidence found.

@@ -1,0 +1,24 @@
+1. How would you handle a taxonomy that has 5,000 categories instead of 12?
+
+To scale to thousands of categories, the system would move from flat matching to a hierarchical, multi-stage filtering approach. The taxonomy would be structured into
+multiple levels (for example: Domain - Genre - Sub-Genre). At runtime, coarse-grained signals would first narrow down the relevant domain or genre.
+Only a small subset of candidate categories would then be evaluated using fine-grained matching. For further scalability, semantic indexing (such as embeddings or vector
+search) could be used to retrieve the top-N relevant categories instead of scanning the entire taxonomy.
+This staged filtering approach will keep both the time and memory complexity to be manageable as the taxonomy grows.
+
+
+2. How would you minimize LLM costs if we had to process 1 million stories a month?
+
+LLMs would be used as a fallback mechanism, not as the primary inference method. Most stories would be processed using rule-based logic, keyword and concept matching, and
+cached results for repeated or similar inputs.
+Only ambiguous cases with low confidence or conflicting signals would be routed to an LLM. Cost would be further reduced by batching requests, caching LLM outputs, and using
+smaller or task-specific models where possible.
+This hybrid approach significantly reduces API usage while still benefiting from LLM reasoning when needed.
+
+
+3. How do you ensure the model doesn’t “hallucinate” sub-genres that don’t exist in the JSON?
+
+Hallucinations are prevented through strict taxonomy validation. Every predicted sub-genre is validated against the taxonomy JSON before being returned. If a predicted
+label does not exist, it is rejected and the system either selects a valid alternative or returns [UNMAPPED].
+The inference engine never generates free-form category names and can only choose from predefined taxonomy entries. This guarantees that all outputs remain valid and consistent
+with the approved taxonomy.

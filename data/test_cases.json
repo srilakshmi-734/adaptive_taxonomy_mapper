@@ -1,0 +1,108 @@
+[
+  {
+    "id": 1,
+    "tags": ["Love"],
+    "blurb": "They hated each other for years, working in the same cubicle, until a late-night deadline changed everything.",
+    "expected_type": "Fiction",
+    "notes": "Workplace rivalry evolving into romance"
+  },
+  {
+    "id": 2,
+    "tags": ["Action", "Spies"],
+    "blurb": "Agent Smith must recover the stolen drive without being detected by the Kremlin.",
+    "expected_type": "Fiction",
+    "notes": "Espionage with geopolitical stakes"
+  },
+  {
+    "id": 3,
+    "tags": ["Scary", "House"],
+    "blurb": "The old Victorian mansion seemed to breathe, its corridors whispering secrets of the family's dark past.",
+    "expected_type": "Fiction",
+    "notes": "Atmospheric haunted setting"
+  },
+  {
+    "id": 4,
+    "tags": ["Love", "Future"],
+    "blurb": "A story about a man who falls in love with his AI operating system in a neon-drenched Tokyo.",
+    "expected_type": "Fiction",
+    "notes": "Ambiguous between Romance and Cyberpunk"
+  },
+  {
+    "id": 5,
+    "tags": ["Action"],
+    "blurb": "The lawyer stood before the judge, knowing this cross-examination would decide the fate of the city.",
+    "expected_type": "Fiction",
+    "notes": "Legal context overrides action tag"
+  },
+  {
+    "id": 6,
+    "tags": ["Space"],
+    "blurb": "How to build a telescope in your backyard using basic household items.",
+    "expected_type": "Non-Fiction",
+    "notes": "Instructional content"
+  },
+  {
+    "id": 7,
+    "tags": ["Sad", "Love"],
+    "blurb": "They met again 20 years after the war, both gray-haired, wondering what could have been.",
+    "expected_type": "Fiction",
+    "notes": "Reunion after long separation"
+  },
+  {
+    "id": 8,
+    "tags": ["Robots"],
+    "blurb": "A deep dive into the physics of FTL travel and the metabolic needs of long-term stasis.",
+    "expected_type": "Fiction",
+    "notes": "Scientific explanation within speculative context"
+  },
+  {
+    "id": 9,
+    "tags": ["Ghost"],
+    "blurb": "A masked killer stalks a group of teenagers at a summer camp.",
+    "expected_type": "Fiction",
+    "notes": "Classic slasher scenario"
+  },
+  {
+    "id": 10,
+    "tags": ["Recipe", "Sweet"],
+    "blurb": "Mix two cups of flour with sugar and bake at 350 degrees.",
+    "expected_type": "Non-Fiction",
+    "notes": "Cooking instructions"
+  },
+
+  {
+    "id": 11,
+    "tags": ["Magic", "War"],
+    "blurb": "In a kingdom divided by prophecy, a reluctant hero must master forbidden magic to stop an ancient war.",
+    "expected_type": "Fiction",
+    "notes": "Epic fantasy indicators"
+  },
+  {
+    "id": 12,
+    "tags": ["Technology"],
+    "blurb": "An overview of how neural networks are trained using backpropagation and gradient descent.",
+    "expected_type": "Non-Fiction",
+    "notes": "Educational technical explanation"
+  },
+  {
+    "id": 13,
+    "tags": ["Crime"],
+    "blurb": "A detective struggles with paranoia as he uncovers a conspiracy that may only exist in his mind.",
+    "expected_type": "Fiction",
+    "notes": "Psychological thriller ambiguity"
+  },
+  {
+    "id": 14,
+    "tags": ["Future", "War"],
+    "blurb": "After civilization collapses, survivors navigate a radioactive wasteland ruled by fractured factions.",
+    "expected_type": "Fiction",
+    "notes": "Post-apocalyptic setting"
+  },
+  {
+    "id": 15,
+    "tags": ["History"],
+    "blurb": "A chronological analysis of trade routes during the medieval period and their economic impact.",
+    "expected_type": "Non-Fiction",
+    "notes": "Historical analysis"
+  }
+]

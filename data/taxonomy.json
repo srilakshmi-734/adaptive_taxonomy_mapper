@@ -1,0 +1,122 @@
+{
+  "Fiction": {
+    "Romance": {
+      "subgenres": [
+        "Slow-burn",
+        "Enemies-to-Lovers",
+        "Second Chance",
+        "Friends-to-Lovers",
+        "Forbidden Love",
+        "Workplace Romance",
+        "Age-Gap Romance"
+      ],
+      "signals": [
+        "relationship",
+        "love",
+        "romance",
+        "emotional bond"
+      ]
+    },
+
+    "Thriller": {
+      "subgenres": [
+        "Espionage",
+        "Psychological",
+        "Legal Thriller",
+        "Political Thriller",
+        "Crime Thriller",
+        "Medical Thriller",
+        "Techno-Thriller"
+      ],
+      "signals": [
+        "tension",
+        "stakes",
+        "danger",
+        "conspiracy"
+      ]
+    },
+
+    "Sci-Fi": {
+      "subgenres": [
+        "Hard Sci-Fi",
+        "Space Opera",
+        "Cyberpunk",
+        "AI Fiction",
+        "Time Travel",
+        "Dystopian",
+        "Post-Apocalyptic"
+      ],
+      "signals": [
+        "future",
+        "technology",
+        "science",
+        "space"
+      ]
+    },
+
+    "Horror": {
+      "subgenres": [
+        "Psychological Horror",
+        "Gothic",
+        "Slasher",
+        "Supernatural Horror",
+        "Cosmic Horror",
+        "Body Horror",
+        "Haunted House"
+      ],
+      "signals": [
+        "fear",
+        "terror",
+        "dark",
+        "unknown"
+      ]
+    },
+
+    "Fantasy": {
+      "subgenres": [
+        "Epic Fantasy",
+        "Dark Fantasy",
+        "Urban Fantasy",
+        "High Fantasy",
+        "Mythological Fantasy",
+        "Sword and Sorcery"
+      ],
+      "signals": [
+        "magic",
+        "myth",
+        "kingdom",
+        "prophecy"
+      ]
+    }
+  },
+
+  "Non-Fiction": {
+    "Instructional": {
+      "subgenres": [
+        "Cooking",
+        "DIY",
+        "How-To Guides",
+        "Educational Manuals"
+      ],
+      "signals": [
+        "how to",
+        "step by step",
+        "instructions"
+      ]
+    },
+
+    "Informational": {
+      "subgenres": [
+        "Science Explanation",
+        "Technology Overview",
+        "Historical Analysis",
+        "Biography"
+      ],
+      "signals": [
+        "explains",
+        "overview",
+        "analysis"
+      ]
+    }
+  }
+}

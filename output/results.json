@@ -1,0 +1,77 @@
+[
+  {
+    "case_id": 1,
+    "mapped_genre": "Enemies-to-Lovers",
+    "reasoning": "Strong keyword 'hate' indicates Enemies-to-Lovers."
+  },
+  {
+    "case_id": 2,
+    "mapped_genre": "Espionage",
+    "reasoning": "Strong keyword 'agent' indicates Espionage."
+  },
+  {
+    "case_id": 3,
+    "mapped_genre": "Gothic",
+    "reasoning": "Strong keyword 'victorian' indicates Gothic."
+  },
+  {
+    "case_id": 4,
+    "mapped_genre": "Espionage",
+    "reasoning": "Strong keyword 'intelligence' indicates Espionage."
+  },
+  {
+    "case_id": 5,
+    "mapped_genre": "Legal Thriller",
+    "reasoning": "Strong keyword 'lawyer' indicates Legal Thriller."
+  },
+  {
+    "case_id": 6,
+    "mapped_genre": "[UNMAPPED]",
+    "reasoning": "Detected instructional or non-fiction content."
+  },
+  {
+    "case_id": 7,
+    "mapped_genre": "Second Chance",
+    "reasoning": "Strong keyword 'met again' indicates Second Chance."
+  },
+  {
+    "case_id": 8,
+    "mapped_genre": "Hard Sci-Fi",
+    "reasoning": "Strong keyword 'physics' indicates Hard Sci-Fi."
+  },
+  {
+    "case_id": 9,
+    "mapped_genre": "Slasher",
+    "reasoning": "Strong keyword 'killer' indicates Slasher."
+  },
+  {
+    "case_id": 10,
+    "mapped_genre": "[UNMAPPED]",
+    "reasoning": "Detected instructional or non-fiction content."
+  },
+  {
+    "case_id": 11,
+    "mapped_genre": "[UNMAPPED]",
+    "reasoning": "No sufficient keyword or semantic evidence found."
+  },
+  {
+    "case_id": 12,
+    "mapped_genre": "[UNMAPPED]",
+    "reasoning": "No sufficient keyword or semantic evidence found."
+  },
+  {
+    "case_id": 13,
+    "mapped_genre": "Psychological",
+    "reasoning": "Strong keyword 'paranoia' indicates Psychological."
+  },
+  {
+    "case_id": 14,
+    "mapped_genre": "[UNMAPPED]",
+    "reasoning": "No sufficient keyword or semantic evidence found."
+  },
+  {
+    "case_id": 15,
+    "mapped_genre": "[UNMAPPED]",
+    "reasoning": "No sufficient keyword or semantic evidence found."
+  }
+]
