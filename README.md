@@ -1,101 +1,192 @@
-Adaptive Taxonomy Mapper – Project Description
+# Adaptive Taxonomy Mapper
 
-The Adaptive Taxonomy Mapper is a rule-based inference system developed to map noisy, user-generated tags and story descriptions to a predefined internal taxonomy. In real-world platforms, users often tag content with vague or misleading labels such as “Love” or “Action,” which are insufficient for accurate recommendation systems. This project addresses that problem by inferring precise sub-genres using story context rather than relying solely on user tags.
+## Overview
+The Adaptive Taxonomy Mapper is a rule-based inference system designed to map noisy, user-generated tags and story descriptions to a structured internal taxonomy.  
+It addresses the common issue where users provide vague or misleading tags (e.g., “Love”, “Action”), while recommendation systems require precise, high-quality genre labels.
 
-The system is designed to be scalable, explainable, and deterministic, ensuring that every classification decision can be clearly justified.
+The system prioritizes **story context over user tags**, ensures **honest classification**, and provides **clear reasoning** for every mapping decision.
 
-Problem Addressed
+---
 
-User-generated content suffers from poor-quality tagging. These tags are often:
+## Problem Statement
+User-generated content is often poorly tagged, making it difficult for recommendation engines to function effectively.  
+The goal of this project is to build an inference engine that:
 
-Too generic
+- Infers accurate sub-genres from messy input
+- Avoids forcing incorrect classifications
+- Respects a predefined taxonomy hierarchy
+- Explains *why* a particular genre was chosen
 
-Incorrect
+---
 
-Incomplete
+## Design Rules Implemented
 
-Contextually misleading
+### 1. Context Wins Rule
+The story description (blurb) takes priority over user-provided tags.  
+If tags conflict with the actual story context, the system follows the context.
 
-The objective of this project is to transform such noisy inputs into accurate, high-precision taxonomy labels while respecting the structure of the provided taxonomy and avoiding forced or incorrect mappings.
+### 2. Honesty Rule
+If a story does not fit any category in the taxonomy (e.g., recipes, tutorials, instructional content), the system returns:
 
-Core Rules Followed
 
-Context Wins Rule
-The story description (blurb) is given higher priority than user tags. If there is a conflict between the tag and the actual content, the system follows the content.
+### 3. Hierarchy Rule
+All predictions must strictly exist within the provided taxonomy.  
+The system never invents or hallucinates new genres.
 
-Honesty Rule
-If a story does not fit any category in the taxonomy (for example, recipes or instructional content), the system does not force a classification and instead returns [UNMAPPED].
+---
 
-Hierarchy Rule
-All predicted sub-genres must exist in the provided taxonomy. The system never generates or assumes new categories.
+## Project Structure
 
-Project Structure Explanation
+adaptive_taxonomy_mapper/
+│
+├── data/
+│ ├── taxonomy.json
+│ └── test_cases.json
+│
+├── mapper/
+│ ├── init.py
+│ ├── loader.py
+│ ├── text_utils.py
+│ ├── inference_engine.py
+│
+├── output/
+│ └── results.json
+│
+├── main.py
+├── reasoning_log.txt
+└── README.md
 
-data/
-Contains the taxonomy definition and test cases.
 
-mapper/
-Contains the core logic of the system:
+---
 
-loader.py for loading data safely and scalably
+## System Workflow
 
-text_utils.py for text preprocessing and normalization
+User Tags + Story Blurb
+↓
+Text Preprocessing
+↓
+Non-Fiction Detection
+↓
+Keyword Matching
+↓
+Semantic Concept Matching
+↓
+Taxonomy Validation
+↓
+Final Genre or [UNMAPPED]
 
-inference_engine.py for genre inference logic
 
-main.py
-Acts as the pipeline controller that connects all components, processes inputs, and generates outputs.
+---
 
-output/results.json
-Stores the final inferred genres with reasoning.
+## Core Components
 
-reasoning_log.txt
-Stores human-readable explanations for each inference.
+### `loader.py`
+- Safely loads JSON data
+- Includes a scalable, generator-based loader for large datasets
+- Provides clear error handling
 
-System Working Flow
+### `text_utils.py`
+- Normalizes and cleans text
+- Removes stopwords
+- Handles basic synonym normalization
+- Optimized for large-scale input processing
 
-User tags and story blurb are taken as input
+### `inference_engine.py`
+- Core reasoning engine
+- Uses:
+  - Strong keyword signals
+  - Semantic concept matching (handles metaphor-like expressions)
+  - Context-over-tag logic
+- Prevents hallucinations by validating outputs against the taxonomy
 
-Text is preprocessed and normalized
+### `main.py`
+- Orchestrates the entire pipeline
+- Loads data
+- Calls the inference engine
+- Writes structured outputs and reasoning logs
 
-Non-fiction or instructional content is detected
+---
 
-Strong keyword matching is applied
+## Handling Complexity
 
-Semantic concept matching is applied to handle abstract or metaphorical expressions
+### What the System Handles
+- Large input volumes (scalable design)
+- Noisy and misleading tags
+- Contextual ambiguity
+- Metaphorical expressions (e.g., “battle of minds in the courtroom”)
+- Strict taxonomy enforcement
+- Explainable and deterministic decisions
 
-The predicted genre is validated against the taxonomy
+### What the System Does Not Handle (By Design)
+- Deep semantic reasoning using machine learning or LLMs
+- Sarcasm or meaning without textual cues
 
-The final genre or [UNMAPPED] is returned with reasoning
+This design choice ensures speed, explainability, and low operational cost.
 
-Handling of Complexity
+---
 
-The system is capable of handling:
+## Example Output
 
-Large volumes of input data
+### `results.json`
+```json
+{
+  "case_id": 5,
+  "mapped_genre": "Legal Thriller",
+  "reasoning": "Semantic concept 'battle of minds' suggests Legal Thriller."
+}
 
-Noisy and misleading user tags
-
-Contextual ambiguity
-
-Metaphorical expressions such as “a battle of minds in the courtroom”
-
-Strict taxonomy validation without hallucination
-
-The system intentionally avoids heavy machine learning or LLM-based reasoning to maintain explainability, speed, and deterministic behavior.
-
-Output Explanation
-
-For each input case, the system produces:
-
-The mapped sub-genre (or [UNMAPPED])
-
-A short reasoning explaining why that genre was chosen
-
-This reasoning is stored both in structured JSON format and in a readable log file.
 
 How to Run the Project
+Requirements
 
-The project can be executed by running the following command from the project root directory:
+Python 3.8 or higher
 
+Command
 python main.py
+
+Output Files Generated
+
+output/results.json
+
+reasoning_log.txt
+
+Scalability Considerations
+
+Linear-time text processing
+
+Generator-based loading for large datasets
+
+Modular design allows easy extension to:
+
+Embedding-based similarity
+
+Hybrid rule + ML inference
+
+LLM-assisted fallback systems
+
+Design Philosophy
+
+The system prioritizes:
+
+Explainability over black-box accuracy
+
+Deterministic behavior over probabilistic guessing
+
+Maintainability and scalability over unnecessary complexity
+
+The architecture mirrors real-world content classification and recommendation pipelines.
+
+Future Enhancements
+
+Confidence scoring for predictions
+
+TF-IDF or embedding-based similarity
+
+Multilingual support
+
+Hybrid LLM-assisted inference
+
+Conclusion
+
+The Adaptive Taxonomy Mapper demonstrates a scalable, honest, and explainable approach to transforming noisy user-generated inputs into high-quality taxonomy labels.
+It balances accuracy, transparency, and system design principles suitable for real-world deployment.
